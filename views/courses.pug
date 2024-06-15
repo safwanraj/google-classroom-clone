@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color", content="#00a8ff")
+        link(rel='stylesheet' href='/css/bootstrap.css')
+        script(src="/js/pace.js")
+        link(rel="stylesheet" href="/css/pace.css")
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/scrollbar.css")
+
+        link(rel='shortcut icon' href='/favicon.ico')
+        link(rel="manifest" href="/manifest.json")
+        link(rel="apple-touch-icon" href="/manifestlogo.png")
+        
+        meta(name="description" content="Find all the classrooms.")
+        title Dashboard
+    body 
+        .courcesWrapper
+            .topBar
+                .leftContent
+                    .svgContainer.hamBurger
+                        svg(aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512")
+                            path(fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z")
+                    span #{pageTitle}
+                .rightContent
+                    .iconContainer
+                        button.svgContainer#joinClass(aria-label="Join Class", data-toggle="modal" data-target="#joinClassPromptModal" data-dismiss="modal" data-backdrop="")
+                            svg(aria-hidden="true" focusable="false" data-prefix="far" data-icon="keyboard" class="svg-inline--fa fa-keyboard fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512")
+                                path(fill="currentColor" d="M528 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h480c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm8 336c0 4.411-3.589 8-8 8H48c-4.411 0-8-3.589-8-8V112c0-4.411 3.589-8 8-8h480c4.411 0 8 3.589 8 8v288zM170 270v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm-336 82v-28c0-6.627-5.373-12-12-12H82c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm384 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zM122 188v-28c0-6.627-5.373-12-12-12H82c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm96 0v-28c0-6.627-5.373-12-12-12h-28c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12zm-98 158v-16c0-6.627-5.373-12-12-12H180c-6.627 0-12 5.373-12 12v16c0 6.627 5.373 12 12 12h216c6.627 0 12-5.373 12-12z")
+                        button.svgContainer#createClass(aria-label="Create Class", data-toggle="modal" data-target="#createClassPromptModal" data-dismiss="modal" data-backdrop="")
+                            svg(aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512")
+                                path(fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z")
+                    .profileImageHolder
+                        img(src=userLoggedIn.profilePic, alt="Profile Picture")
+            .dashboard
+                .noContent 
+                    span Click on the + button to create a class
+                .cardsContainer
+
+            script(src='/js/jquery.js')
+            script(src='/js/popover.js')
+            script(src='/js/bootstrap.js')
+
+            block scripts 
+            
+            script(src='/js/courses.js')
+            script(src='/js/common.js')
+
+        #createClassPromptModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='createClassPromptModalLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#createClassPromptModalLabel.modal-title Create Class
+                    .modal-body
+                        input#inputClassName(type="text", name="inputClassName", placeholder="Class Name")
+                        input#inputClassTimings(type="text", name="inputClassName", placeholder="Class Timings")
+                    .modal-footer
+                        button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel
+                        button#confirmCreateClass.btn.btn-primary(type='button') Create
+        
+        #joinClassPromptModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='joinClassPromptModalLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#joinClassPromptModalLabel.modal-title Join Class
+                    .modal-body
+                        input#inputJoinClassName(type="text", name="inputClassName", placeholder="Class Name")
+                    .modal-footer
+                        button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel
+                        button#confirmJoinButton.btn.btn-primary(type='button') Join
+        
+        #hamburgerMenu.modal.fade(tabindex='-1' role='dialog' aria-labelledby='hamburgerMenuLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#hamburgerMenuLabel.modal-title Menu
+                    .modal-body.justifySpaceEvenly
+                        button.btn.btn-outline-info.calendar(type="button" ) Calendar
+                        button.btn.btn-outline-danger.logout(type="button" ) Logout
+                    .modal-footer
+                        button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel
+    script.
+        if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }

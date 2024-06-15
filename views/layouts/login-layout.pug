@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="Login to classroom.")
+        title Login / Register
+        script(src="/js/pace.js")
+        link(rel="stylesheet" href="/css/pace.css")
+        link(href='/css/bootstrap.css', rel='stylesheet')
+        link(rel="stylesheet", href="/css/login.css")
+        link(rel="stylesheet", href="/css/scrollbar.css")
+
+    body
+        .wrapper 
+            block content
+
+        script(src='/js/jquery.js')
+        script(src='/js/bootstrap.js')
+        script.
+            if(window.location.hostname !== 'localhost') {
+                if (location.protocol !== 'https:') {
+                    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+                }
+            }

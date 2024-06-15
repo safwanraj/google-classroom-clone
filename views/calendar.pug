@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='/css/bootstrap.css' )
+        script(src="/js/pace.js")
+        link(rel="stylesheet" href="/css/pace.css")
+        link(rel="stylesheet", href="/css/class.css")
+        link(rel="stylesheet", href="/css/calendar.css")
+        link(rel="stylesheet", href="/css/scrollbar.css")
+
+        title !{pageTitle}
+    body 
+        script.
+            var userLoggedIn = !{userLoggedInJs};
+            var classObject = 'calendar';
+        .courcesWrapper
+            .topNavigator(style="display:flex; justify-content:flex-start;margin-top: 0.8rem;")
+                .leftContent
+                    .svgContainer.hamBurger
+                        svg(aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512")
+                            path(fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z")
+                    span #{pageTitle}
+            .content
+                .streamContainer
+                    .bodyContainer
+                        .mainBodyContainer
+                            .classesContainer
+
+                            .calendarHolder
+                                div#calendarContainer
+                            
+
+            script(src='/js/jquery.js')
+            script(src='/js/popover.js')
+            script(src='/js/bootstrap.js')
+            
+            block scripts 
+            
+            script(src='/js/jquery-calendar.js')
+            script(src='/js/calendar.js')
+            script(src='/js/common.js')
+        
+        #hamburgerMenu.modal.fade(tabindex='-1' role='dialog' aria-labelledby='hamburgerMenuLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#hamburgerMenuLabel.modal-title Menu
+                    .modal-body.justifySpaceEvenly
+                        button.btn.btn-outline-success.home(type="button" ) Home
+                        button.btn.btn-outline-info.calendar(type="button" ) Calendar
+                        button.btn.btn-outline-danger.logout(type="button" ) Logout
+                    .modal-footer
+                        button.btn.btn-secondary(type='button' data-dismiss='modal') Cancel

@@ -1,0 +1,238 @@
+:root {
+    --lightGray: #f7f7f7;
+    --buttonBlack: #00000096;
+    --backgroundBlue: #09ff0054;
+    --cardBorderColor: #dadce0;
+    --svgHoverBoxShadow: #5f63680a;
+    --borderTopLine: 0.0625rem solid #e0e0e0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-weight: 400;
+}
+
+.justifySpaceEvenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.courcesWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.courcesWrapper .topBar {
+    min-height: 3rem;
+    max-height: 5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    border-bottom: var(--borderTopLine);
+    background-color: white;
+    z-index: 2;
+}
+
+.leftContent {
+    display: flex;
+    align-items: center;
+}
+
+.leftContent .svgContainer {
+    height: 2rem;
+    width: 3rem;
+    color: var(--buttonBlack);
+    padding: 0.5rem 0.8rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.leftContent .svgContainer:hover { 
+    border-radius: 50%;
+    background-color: var(--svgHoverBoxShadow);
+}
+
+#createClass, #joinClass {
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    height: 3rem;
+}
+
+#createClass:hover,
+#joinClass:hover {
+    border-radius: 50%;
+    background-color: var(--svgHoverBoxShadow);
+    
+}
+
+#inputClassName, #inputJoinClassName, #inputClassTimings {
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--cardBorderColor);
+}
+
+.leftContent span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.rightContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rightContent .iconContainer {
+    margin: auto 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.rightContent .iconContainer .svgContainer {
+    height: 3.5rem;
+    width: 3.5rem;
+    color: var(--buttonBlack);
+    padding: 0.5rem 0.8rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rightContent .iconContainer .svgContainer svg {
+    pointer-events: none;
+}
+
+.rightContent .iconContainer .svgContainer:hover {
+    border-radius: 50%;
+    background-color: var(--svgHoverBoxShadow);
+}
+
+.rightContent .profileImageHolder {
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+.rightContent .profileImageHolder img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.noContent {
+    height: 90%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard {
+    height: 100%;
+}
+
+.cardsContainer {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.classCard {
+    border: 1px solid var(--cardBorderColor);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 18rem;
+    overflow: hidden;
+    height: 18.375rem;
+    background-clip: padding-box;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    position: relative;
+}
+
+.classCardHeader {
+    background-color: var(--backgroundBlue);
+    min-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+.classCardHeader span {
+    pointer-events: none;
+}
+
+.classCardHeader .className {
+    font-size: 1.6rem;
+}
+
+.classCardHeader .classCode {
+    font-size: 1.3rem;
+}
+
+.classCardBodyContent .classOwner {
+    font-size: 1.2rem;
+}
+
+.classCardBodyContent .classStudentCount {
+    font-size: 1.1rem;
+}
+
+.classCardBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 6rem;
+    margin-top: auto;
+}
+
+.classCardBodyContent {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+
+.classCardBodyIcons {
+    margin: 1rem 0 0 0;
+    display: flex;
+    /* border-top: var(--borderTopLine); */
+}
+
+.classCardBodyIcons .svgContainer {
+    border-top: var(--borderTopLine);
+    display: flex;
+    justify-content: flex-end;
+    color: var(--buttonBlack);
+    height: 3rem;
+    width: 100%;
+    padding: 0.8rem 0.5rem 0 0;
+}
+
+.classCardBodyIcons .svgContainer .svgContainerDiv {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: grid;
+    place-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.classCardBodyIcons .svgContainer .svgContainerDiv:hover {
+    border-radius: 50%;
+    background-color: var(--svgHoverBoxShadow);
+}
